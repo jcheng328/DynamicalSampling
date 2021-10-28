@@ -1,0 +1,163 @@
+{
+    "Temporal_Size": 0,
+    "Numerical_Rank": 0,
+    "Noise":{
+        "activated": false,
+        "Additive_Gaussian_Noise": true,
+        "Multiplicative_Gaussian_Noise": false,
+        "stdv": 0,
+        "snr": 100
+    },
+    "Cadzow_Denoise":{
+        "activated": false,
+        "max_iter": 800
+    },
+    "verbose": true,    
+    "Method":{
+        "Prony_LS":             true,
+        "Prony_TLS":            true,
+        "ESPRIT_LS":            true,
+        "ESPRIT_TLS":           true,
+        "Matrix_Pencil_LS":     true,
+        "Matrix_Pencil_TLS":    true,
+        "Matrix_Pencil_SVD_LS": true,
+        "Matrix_Pencil_SVD_TLS":true,
+        "Root_MUSIC":           false
+    },
+    "Examples":{
+        "Discrete_Affine_System":               false,
+        "Simple_Directed_Unweighted_Graph":     false,
+        "Ring_Graph":                           true,
+        "Sphere_Graph":                         true,
+        "LIP":                                  true,
+        "Human_Walk_Motion":                    true,
+        "Low_Rank_Affine_Dynamical_System":     false,
+        "Biparte_Graph":                        false,
+        "Erdos_Renyi_Graph":                    false,
+        "PSD_Low_Rank_Matrix":                  false,
+        "Random_Simple_d_Regular_Graph":        false,  
+        "Unitary_Matrix":                       false,
+        "Random_Directed_Graph":                false,
+        "Random_Directed_Acyclic_Graph":        false,
+        "Mouse_Brain":                          false,
+        "Dolphin":                              false
+    },
+    "Example_Settings":{
+        "Discrete_Affine_System":                           
+                {"exp1_test_viewpoints":
+                    {"test1" : {"viewpoints": [1]        },
+                     "test2" : {"viewpoints": [1,4]      },
+                     "test3" : {"viewpoints": [1,4,7]    },
+                     "test4" : {"viewpoints": [1,2,4,7]  }},
+                 "exp2_test_temporalsize":
+                    {"test1" : {"viewpoints": [1,2,4,7], "Temporal_Size": 24},
+                     "test2" : {"viewpoints": [1,2,4,7], "Temporal_Size": 32},
+                     "test3" : {"viewpoints": [1,2,4,7], "Temporal_Size": 40},
+                     "test4" : {"viewpoints": [1,2,4,7], "Temporal_Size": 48}},
+                "exp3_test_noisy":
+                    {"test1" : {"viewpoints": [1],       "Noise_activated": true},
+                     "test2" : {"viewpoints": [1,2],     "Noise_activated": true},
+                     "test2" : {"viewpoints": [1,2,3],   "Noise_activated": true},
+                     "test3" : {"viewpoints": [1,2,3,4], "Noise_activated": true}},
+                 "exp4_test_noisy_cadzow_denoise":
+                    {"test1" : {"viewpoints": [1],       "Noise_activated": true, "Cadzow_Denoise_activated": true},
+                     "test2" : {"viewpoints": [1,2],     "Noise_activated": true, "Cadzow_Denoise_activated": true},
+                     "test3" : {"viewpoints": [1,2,3],   "Noise_activated": true, "Cadzow_Denoise_activated": true},
+                     "test3" : {"viewpoints": [1,2,3,4], "Noise_activated": true, "Cadzow_Denoise_activated": true}}
+                },
+        "Simple_Directed_Unweighted_Graph":              
+                {"exp1_test_viewpoints":
+                    {"test1" : {"viewpoints": [1]        },
+                     "test2" : {"viewpoints": [1,2]      },
+                     "test3" : {"viewpoints": [1,2,3]    },
+                     "test4" : {"viewpoints": [1,2,3,4]  }},
+                 "exp2_test_temporalsize":
+                    {"test1" : {"viewpoints": [1,2,3,4], "Temporal_Size": 60},
+                     "test2" : {"viewpoints": [1,2,3,4], "Temporal_Size": 80},
+                     "test3" : {"viewpoints": [1,2,3,4], "Temporal_Size": 100},
+                     "test4" : {"viewpoints": [1,2,3,4], "Temporal_Size": 120}}
+                 },
+        "Ring_Graph":                                     
+                {"exp1_test_viewpoints":
+                    {"test1" : {"viewpoints": [1]          },
+                     "test2" : {"viewpoints": [1,2]        },
+                     "test3" : {"viewpoints": [1,2,3]      },
+                     "test4" : {"viewpoints": [1,2,3,4]    },
+                     "test5" : {"viewpoints": [1,2,3,4,5]  }},
+                 "exp2_test_temporalsize":
+                    {"test1" : {"viewpoints": [1,2,3,4,5],   "Temporal_Size": 90},
+                     "test2" : {"viewpoints": [1,2,3,4,5],   "Temporal_Size": 120},
+                     "test3" : {"viewpoints": [1,2,3,4,5],   "Temporal_Size": 150},
+                     "test4" : {"viewpoints": [1,2,3,4,5],   "Temporal_Size": 180}}
+                 },
+        "Sphere_Graph":                                        
+                {"exp1_test_viewpionts":
+                    {"test1" : {"viewpoints": [1,2]        },
+                     "test2" : {"viewpoints": [1,2,3]      },
+                     "test3" : {"viewpoints": [1,2,3,4]    },
+                     "test4" : {"viewpoints": [1,2,3,4,5]   }},
+                 "exp2_test_temporalsize":
+                    {"test1" : {"viewpoints": [1,2,3,4,5], "Temporal_Size": 450},
+                     "test2" : {"viewpoints": [1,2,3,4,5], "Temporal_Size": 600},
+                     "test3" : {"viewpoints": [1,2,3,4,5], "Temporal_Size": 750},
+                     "test4" : {"viewpoints": [1,2,3,4,5], "Temporal_Size": 900}}
+                 },
+        "LIP":                                                 
+                {"exp2_test_noisefree":
+                    {"test1" : {"viewpoints": [1],     "Noise_activated": true},
+                     "test2" : {"viewpoints": [1,2],   "Noise_activated": true},
+                     "test3" : {"viewpoints": [1,2,3], "Noise_activated": true}},
+                "exp2_test_noisy":
+                    {"test1" : {"viewpoints": [1],     "Noise_activated": true},
+                     "test2" : {"viewpoints": [1,2],   "Noise_activated": true},
+                     "test3" : {"viewpoints": [1,2,3], "Noise_activated": true}},
+                 "exp3_test_noisy_cadzow_denoise":
+                    {"test1" : {"viewpoints": [1,2,3], "Noise_activated": true, "Cadzow_Denoise_activated": true},
+                     "test2" : {"viewpoints": [1,2,3], "Noise_activated": true, "Cadzow_Denoise_activated": true},
+                     "test3" : {"viewpoints": [1,2,3], "Noise_activated": true, "Cadzow_Denoise_activated": true}}
+                 },
+        "Human_Walk_Motion":                                                 
+                {"exp2_test_noisefree":
+                    {"test1" : {"viewpoints": [1],       "Noise_activated": false},
+                    "test2" : {"viewpoints":  [1,3,5],     "Noise_activated": false},
+                    "test3" : {"viewpoints":  [1,2,3,4,5],   "Noise_activated": false},
+                    "test4" : {"viewpoints":  [1,2,3,4,5,6,7], "Noise_activated": false}},
+                "exp2_test_noisy":
+                    {"test1" : {"viewpoints": [1],       "Noise_activated": true},
+                    "test2" : {"viewpoints":  [1,3,9],     "Noise_activated": true},
+                    "test3" : {"viewpoints":  [1,2,3,9],   "Noise_activated": true},
+                    "test4" : {"viewpoints":  [1,2,3,5,9], "Noise_activated": true}},
+                "exp3_test_noisy_cadzow_denoise":
+                    {"test1" : {"viewpoints": [1],       "Noise_activated": true, "Cadzow_Denoise_activated": true},
+                    "test2" : {"viewpoints":  [1,3,9],     "Noise_activated": true, "Cadzow_Denoise_activated": true},
+                    "test3" : {"viewpoints":  [1,2,3,9],   "Noise_activated": true, "Cadzow_Denoise_activated": true},
+                    "test4" : {"viewpoints":  [1,2,3,5,9], "Noise_activated": true, "Cadzow_Denoise_activated": true}}
+                },
+        "Low_Rank_Affine_Dynamical_System":         
+                {"exp1":
+                    {"test1" : {"viewpoints": [1],       "Temporal_Size": 0},
+                     "test2" : {"viewpoints": [1,4],     "Temporal_Size": 0},
+                     "test3" : {"viewpoints": [1,4,7],   "Temporal_Size": 0},
+                     "test4" : {"viewpoints": [1,2,4,7], "Temporal_Size": 0}},
+                 "exp2":
+                    {"test1" : {"viewpoints": [1,2,4,7], "Temporal_Size": 0},
+                     "test2" : {"viewpoints": [1,2,4,7], "Temporal_Size": 0},
+                     "test3" : {"viewpoints": [1,2,4,7], "Temporal_Size": 0},
+                     "test4" : {"viewpoints": [1,2,4,7], "Temporal_Size": 0}},
+                 "exp3":
+                    {"test1" : {"viewpoints": [1,2,4,7], "Temporal_Size": 0},
+                     "test2" : {"viewpoints": [1,2,4,7], "Temporal_Size": 0},
+                     "test3" : {"viewpoints": [1,2,4,7], "Temporal_Size": 0},
+                     "test4" : {"viewpoints": [1,2,4,7], "Temporal_Size": 0}}
+                 },
+        "Biparte_Graph":                                    {"viewpoints": [1,2,3,4,5,6,7]},
+        "Dolphin":                                          {"viewpoints": [1,2,3,4,5]},
+        "Erdos_Renyi_Graph":                                {"viewpoints": [1,2,3,4,5,6,7,8]},
+        "PSD_Low_Rank_Matrix":                              {"viewpoints": [1]},
+        "Random_Simple_d-Regular_Graph":                    {"viewpoints": [2,4,6]},
+        "Unitary_Matrix":                                   {"viewpoints": [1,2,3,4,5]},
+        "Random_Directed_Graph":                            {"viewpoints": [1,2,3,4,5]},
+        "Random_Directed_Acyclic_Graph":                    {"viewpoints": [1,2,3,4,5]},
+        "Mouse_Brain":                                      {"viewpoints": [1,2,3,4,5]}
+    }
+}
