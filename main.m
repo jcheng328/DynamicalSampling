@@ -21,7 +21,7 @@ Copyright (c) 2021, Sui Tang, Jiahui Cheng
 
 clear all;
 clc; close all; warning off; addpath(genpath("./utils")); addpath(genpath("./dataset"));
-
+run("./gspbox/gsp_start.m")
 
 %% %%%%%%%%%%%%%%%%%%%%%%%% Default settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Default options
